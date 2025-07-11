@@ -11,7 +11,9 @@ const app = express();
 const port = process.env.PORT || 3009;
 
 // 🔐 Initialize Firebase Admin SDK
-const serviceAccount = require('./serviceAccount.json');
+// const serviceAccount = require('./serviceAccount.json');
+
+const serviceAccount = require('/etc/secrets/serviceAccount.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
